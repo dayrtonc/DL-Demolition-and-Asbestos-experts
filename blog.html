@@ -394,12 +394,7 @@
       
       <!-- Search Bar -->
       <div class="max-w-md mx-auto">
-        <div class="relative">
-          <input type="text" placeholder="Search articles..." class="search-box pr-12">
-          <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-brand-red">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
+        <!-- Search functionality - to be implemented -->
       </div>
     </div>
   </section>
@@ -722,13 +717,8 @@
             <a href="blog-complete-strip-out-services.html" class="text-gray-400 hover:text-brand-red transition-colors">
               <i class="fab fa-facebook text-xl"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-brand-red transition-colors">
-              <i class="fab fa-instagram text-xl"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-brand-red transition-colors">
-              <i class="fab fa-linkedin text-xl"></i>
-            </a>
-          </div>
+            <!-- Instagram: To be added when profile is created -->
+            <!-- LinkedIn: To be added when profile is created --></div>
         </div>
 
         <!-- Quick Links -->
@@ -854,9 +844,7 @@
     searchInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
-        // Implement search functionality here
-        console.log('Searching for:', e.target.value);
-      }
+        // Implement search functionality here}
     });
 
     // Newsletter Subscription
@@ -874,9 +862,7 @@
     // Article Click Tracking
     document.querySelectorAll('.blog-card h3').forEach(title => {
       title.addEventListener('click', () => {
-        // Implement article navigation here
-        console.log('Article clicked:', title.textContent);
-      });
+        // Implement article navigation here});
     });
   </script>
 </body>
