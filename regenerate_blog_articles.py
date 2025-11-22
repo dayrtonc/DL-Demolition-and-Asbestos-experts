@@ -1,10 +1,102 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+Script para regenerar todas as páginas de artigos do blog com design profissional
+matching o layout das outras páginas do site (projects.html, about.html, etc)
+"""
+
+import os
+import markdown
+from pathlib import Path
+
+# Diretório dos artigos em Markdown
+BLOG_DIR = Path("blog")
+OUTPUT_DIR = Path(".")
+
+# Mapeamento de artigos
+ARTICLES = [
+    {
+        "md_file": "asbestos-removal-queensland-guide.md",
+        "html_file": "blog-asbestos-removal-queensland.html",
+        "category": "GUIDE",
+        "read_time": "8 min read",
+        "date": "Dec 15, 2024"
+    },
+    {
+        "md_file": "signs-your-roof-contains-asbestos.md",
+        "html_file": "blog-signs-roof-asbestos.html",
+        "category": "SAFETY",
+        "read_time": "5 min read",
+        "date": "Dec 10, 2024"
+    },
+    {
+        "md_file": "safe-demolition-practices-epa-compliance.md",
+        "html_file": "blog-safe-demolition-epa.html",
+        "category": "DEMOLITION",
+        "read_time": "7 min read",
+        "date": "Dec 8, 2024"
+    },
+    {
+        "md_file": "floor-preparation-tile-removal-best-practices.md",
+        "html_file": "blog-floor-preparation-tile-removal.html",
+        "category": "RENOVATION",
+        "read_time": "6 min read",
+        "date": "Dec 5, 2024"
+    },
+    {
+        "md_file": "bathroom-renovation-safety-asbestos.md",
+        "html_file": "blog-bathroom-renovation-safety.html",
+        "category": "RESIDENTIAL",
+        "read_time": "4 min read",
+        "date": "Dec 3, 2024"
+    },
+    {
+        "md_file": "commercial-kitchen-strip-out-health-safety.md",
+        "html_file": "blog-commercial-kitchen-strip-out.html",
+        "category": "COMMERCIAL",
+        "read_time": "9 min read",
+        "date": "Nov 30, 2024"
+    },
+    {
+        "md_file": "complete-strip-out-services-whats-included.md",
+        "html_file": "blog-complete-strip-out-services.html",
+        "category": "SERVICES",
+        "read_time": "5 min read",
+        "date": "Nov 28, 2024"
+    },
+    {
+        "md_file": "emergency-asbestos-response.md",
+        "html_file": "blog-emergency-asbestos-response.html",
+        "category": "EMERGENCY",
+        "read_time": "6 min read",
+        "date": "Dec 12, 2024"
+    },
+    {
+        "md_file": "cost-factors-in-professional-demolition.md",
+        "html_file": "blog-cost-factors-demolition.html",
+        "category": "PRICING",
+        "read_time": "7 min read",
+        "date": "Dec 9, 2024"
+    },
+    {
+        "md_file": "choosing-the-right-demolition-contractor.md",
+        "html_file": "blog-choosing-right-contractor.html",
+        "category": "GUIDE",
+        "read_time": "6 min read",
+        "date": "Dec 6, 2024"
+    }
+]
+
+
+def create_article_html(article_data, content_html, title):
+    """Cria HTML profissional para um artigo do blog"""
+    
+    html_template = f'''<!DOCTYPE html>
 <html lang="en-AU" class="scroll-smooth">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>> Safe Demolition Practices: EPA Compliance in Queensland | DL Demolition Blog</title>
+  <title>{title} | DL Demolition Blog</title>
   <meta name="description" content="Professional insights on asbestos removal and demolition from Gold Coast's trusted experts." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#e10600" />
@@ -17,11 +109,11 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
+    tailwind.config = {{
+      theme: {{
+        extend: {{
+          colors: {{
+            brand: {{
               black: '#0c0c0c',
               red: '#e10600',
               white: '#ffffff',
@@ -29,24 +121,24 @@
               green: '#25D366',
               lightgray: '#f8f9fa',
               orange: '#FF6B35'
-            }
-          }
-        }
-      }
-    }
+            }}
+          }}
+        }}
+      }}
+    }}
   </script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" />
 
   <style>
-    .article-content {
+    .article-content {{
       font-family: Georgia, 'Times New Roman', serif;
       line-height: 1.8;
       color: #e0e0e0;
-    }
+    }}
     
-    .article-content h2 {
+    .article-content h2 {{
       font-size: 2rem;
       font-weight: 700;
       color: #ffffff;
@@ -54,65 +146,65 @@
       margin-bottom: 1.5rem;
       padding-bottom: 0.5rem;
       border-bottom: 2px solid #e10600;
-    }
+    }}
     
-    .article-content h3 {
+    .article-content h3 {{
       font-size: 1.5rem;
       font-weight: 600;
       color: #ffffff;
       margin-top: 2rem;
       margin-bottom: 1rem;
-    }
+    }}
     
-    .article-content p {
+    .article-content p {{
       margin-bottom: 1.5rem;
       font-size: 1.125rem;
-    }
+    }}
     
-    .article-content ul, .article-content ol {
+    .article-content ul, .article-content ol {{
       margin-bottom: 1.5rem;
       padding-left: 2rem;
-    }
+    }}
     
-    .article-content li {
+    .article-content li {{
       margin-bottom: 0.75rem;
       font-size: 1.125rem;
-    }
+    }}
     
-    .article-content strong {
+    .article-content strong {{
       color: #ffffff;
       font-weight: 600;
-    }
+    }}
     
-    .article-content table {
+    .article-content table {{
       width: 100%;
       margin: 2rem 0;
       border-collapse: collapse;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
       overflow: hidden;
-    }
+    }}
     
-    .article-content th {
+    .article-content th {{
       background: #e10600;
       color: white;
       padding: 1rem;
       text-align: left;
       font-weight: 600;
-    }
+    }}
     
-    .article-content td {
+    .article-content td {{
       padding: 1rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
+    }}
     
-    .article-content blockquote {
+    .article-content blockquote {{
       border-left: 4px solid #e10600;
       padding-left: 1.5rem;
       margin: 2rem 0;
       font-style: italic;
       color: #b0b0b0;
-    }
+    }}
   </style>
 </head>
 
@@ -161,18 +253,18 @@
         <span class="mx-2">/</span>
         <a href="blog.html" class="hover:text-brand-red">Blog</a>
         <span class="mx-2">/</span>
-        <span class="text-white">> Safe Demolition Practices: EPA Compliance in Queensland</span>
+        <span class="text-white">{title}</span>
       </nav>
 
       <!-- Article Header -->
       <div class="mb-12">
         <div class="flex items-center space-x-4 mb-4">
-          <span class="bg-brand-red px-4 py-1 rounded-full text-sm font-semibold">DEMOLITION</span>
-          <span class="text-gray-400">7 min read</span>
-          <span class="text-gray-400">Dec 8, 2024</span>
+          <span class="bg-brand-red px-4 py-1 rounded-full text-sm font-semibold">{article_data['category']}</span>
+          <span class="text-gray-400">{article_data['read_time']}</span>
+          <span class="text-gray-400">{article_data['date']}</span>
         </div>
         
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">> Safe Demolition Practices: EPA Compliance in Queensland</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">{title}</h1>
         
         <div class="flex items-center space-x-4">
           <div class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center font-bold">
@@ -187,102 +279,7 @@
 
       <!-- Article Body -->
       <article class="article-content">
-        <blockquote>
-<h1>Safe Demolition Practices: EPA Compliance in Queensland</h1>
-</blockquote>
-<p><strong>By DL Demolition Team</strong> | Published: December 8, 2024 | 7 min read</p>
-<hr />
-<p>Demolition is more than just tearing down a structure; it is a highly regulated and complex process that demands meticulous planning, strict adherence to safety protocols, and a thorough understanding of environmental responsibilities. In Queensland, ensuring compliance with the Environmental Protection Agency (EPA) and WorkSafe Queensland regulations is not just a matter of best practice—it is a legal requirement. For property owners and developers, understanding these obligations is crucial to avoid hefty fines, project delays, and, most importantly, to ensure the safety of workers and the community.</p>
-<p>This article provides a comprehensive overview of safe demolition practices and EPA compliance in Queensland, covering everything from initial planning and risk assessment to waste management and site remediation.</p>
-<h2>The Regulatory Framework: Who Governs Demolition?</h2>
-<p>In Queensland, demolition work is primarily governed by two key pieces of legislation:</p>
-<ol>
-<li><strong>The <em>Work Health and Safety Act 2011</em> (WHS Act):</strong> This act sets out the broad health and safety duties for all persons conducting a business or undertaking (PCBUs), including demolition contractors.</li>
-<li><strong>The <em>Environmental Protection Act 1994</em> (EP Act):</strong> This act focuses on protecting Queensland's environment and managing waste, which is a significant component of any demolition project.</li>
-</ol>
-<p>Practical guidance on how to comply with these acts is provided in the <strong>Demolition Work Code of Practice 2021</strong> [1] and the <strong>How to Safely Remove Asbestos Code of Practice 2021</strong> [2].</p>
-<h2>Pre-Demolition Planning: The Foundation of a Safe Project</h2>
-<p>Thorough planning is the most critical phase of any demolition project. Before any physical work begins, a licensed demolition contractor must undertake several key steps:</p>
-<h3>1. Site Investigation and Risk Assessment</h3>
-<p>A comprehensive site investigation is conducted to identify all potential hazards. This includes:</p>
-<ul>
-<li><strong>Hazardous Materials Survey:</strong> A licensed professional must inspect the structure for the presence of asbestos, lead paint, polychlorinated biphenyls (PCBs), and other hazardous materials.</li>
-<li><strong>Structural Assessment:</strong> A qualified engineer assesses the structural integrity of the building to determine the safest demolition method.</li>
-<li><strong>Utility Location:</strong> All services, including electricity, gas, water, and telecommunications, must be located and disconnected.</li>
-</ul>
-<h3>2. Safe Work Method Statement (SWMS)</h3>
-<p>A site-specific SWMS is developed, detailing the high-risk construction work to be performed, the associated hazards, and the control measures to be implemented. This document is a legal requirement and must be accessible to all workers on site.</p>
-<h3>3. Notification to Authorities</h3>
-<p>WorkSafe Queensland must be notified at least five days before the commencement of any demolition work that involves:</p>
-<ul>
-<li>Demolition of a structure greater than 6 metres in height.</li>
-<li>Demolition involving explosives.</li>
-<li>Demolition that requires a mobile crane with a rated capacity of more than 100 tonnes.</li>
-</ul>
-<h2>Key Safety Practices During Demolition</h2>
-<p>Once the planning is complete, the physical demolition work can begin. Adherence to strict safety protocols is essential throughout this phase.</p>
-<table>
-<thead>
-<tr>
-<th>Safety Practice</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Exclusion Zones</strong></td>
-<td>Secure fencing and warning signs are erected to prevent unauthorised access to the site.</td>
-</tr>
-<tr>
-<td><strong>Dust Control</strong></td>
-<td>Water sprays and misting systems are used to suppress dust and prevent the spread of airborne contaminants.</td>
-</tr>
-<tr>
-<td><strong>Fall Protection</strong></td>
-<td>Scaffolding, edge protection, and personal fall arrest systems are used when working at heights.</td>
-</tr>
-<tr>
-<td><strong>Personal Protective Equipment (PPE)</strong></td>
-<td>All workers must wear appropriate PPE, including hard hats, steel-capped boots, high-visibility clothing, and respiratory protection.</td>
-</tr>
-<tr>
-<td><strong>Traffic Management</strong></td>
-<td>A traffic management plan is implemented to ensure the safe movement of vehicles and pedestrians around the site.</td>
-</tr>
-<tr>
-<td><strong>Asbestos Removal</strong></td>
-<td>If asbestos is present, it must be removed by a licensed professional before demolition commences, in accordance with the relevant code of practice.</td>
-</tr>
-</tbody>
-</table>
-<h2>EPA Compliance and Waste Management</h2>
-<p>Demolition projects generate significant amounts of waste, and managing this waste in an environmentally responsible manner is a key requirement of the EP Act.</p>
-<h3>Waste Management Hierarchy</h3>
-<p>The EPA promotes a waste management hierarchy that prioritises waste avoidance, reuse, and recycling over disposal.</p>
-<ol>
-<li><strong>Avoidance:</strong> Minimising the amount of waste generated in the first place.</li>
-<li><strong>Reuse:</strong> Reusing materials in their original form (e.g., salvaging timber beams or bricks).</li>
-<li><strong>Recycling:</strong> Processing materials to create new products (e.g., crushing concrete for road base).</li>
-<li><strong>Energy Recovery:</strong> Recovering energy from waste that cannot be recycled.</li>
-<li><strong>Disposal:</strong> Disposing of residual waste in a licensed landfill.</li>
-</ol>
-<h3>Waste Tracking and Disposal</h3>
-<p>Certain types of waste, known as "regulated waste," are subject to strict tracking and disposal requirements. This includes asbestos, contaminated soil, and other hazardous materials. A licensed waste transporter must be used to transport this waste to a facility that is licensed to accept it.</p>
-<h2>The Role of a Licensed Demolition Contractor</h2>
-<p>Given the complexity of the regulations and the significant risks involved, it is essential to engage a licensed and experienced demolition contractor. A professional contractor will:</p>
-<ul>
-<li>Hold the necessary licences and insurances.</li>
-<li>Have a thorough understanding of all relevant legislation and codes of practice.</li>
-<li>Develop a comprehensive and site-specific safety and environmental management plan.</li>
-<li>Ensure all workers are appropriately trained and equipped.</li>
-<li>Manage all aspects of the project, from planning and approvals to waste disposal and site remediation.</li>
-</ul>
-<h2>Conclusion</h2>
-<p>Safe and compliant demolition is a non-negotiable aspect of any construction project in Queensland. By prioritising thorough planning, adhering to strict safety protocols, and engaging licensed professionals, property owners can ensure their projects are completed safely, on time, and in full compliance with all regulatory requirements. This not only protects the health and safety of workers and the community but also safeguards the environment for future generations.</p>
-<hr />
-<h3>References</h3>
-<p>[1] WorkSafe Queensland. "Demolition Work Code of Practice 2021." <a href="https://www.worksafe.qld.gov.au/__data/assets/pdf_file/0026/72629/demolition-work-cop-2021.pdf">https://www.worksafe.qld.gov.au/__data/assets/pdf_file/0026/72629/demolition-work-cop-2021.pdf</a></p>
-<p>[2] WorkSafe Queensland. "How to Safely Remove Asbestos Code of Practice 2021." <a href="https://www.worksafe.qld.gov.au/__data/assets/pdf_file/0023/72635/how-to-safely-remove-asbestos-cop-2021.pdf">https://www.worksafe.qld.gov.au/__data/assets/pdf_file/0023/72635/how-to-safely-remove-asbestos-cop-2021.pdf</a></p>
+        {content_html}
       </article>
 
       <!-- Share & CTA Section -->
@@ -373,4 +370,45 @@
   </a>
 
 </body>
-</html>
+</html>'''
+    
+    return html_template
+
+
+def main():
+    """Regenera todas as páginas de artigos com design profissional"""
+    
+    print("🎨 Regenerando artigos do blog com design profissional...")
+    
+    for article in ARTICLES:
+        md_path = BLOG_DIR / article["md_file"]
+        html_path = OUTPUT_DIR / article["html_file"]
+        
+        if not md_path.exists():
+            print(f"⚠️  Arquivo não encontrado: {md_path}")
+            continue
+        
+        # Ler conteúdo Markdown
+        with open(md_path, 'r', encoding='utf-8') as f:
+            md_content = f.read()
+        
+        # Extrair título (primeira linha com #)
+        title = md_content.split('\n')[0].replace('#', '').strip()
+        
+        # Converter Markdown para HTML
+        content_html = markdown.markdown(md_content, extensions=['tables', 'fenced_code'])
+        
+        # Criar HTML completo
+        full_html = create_article_html(article, content_html, title)
+        
+        # Salvar arquivo
+        with open(html_path, 'w', encoding='utf-8') as f:
+            f.write(full_html)
+        
+        print(f"✅ {article['html_file']}")
+    
+    print("\n🎉 Todos os artigos foram regenerados com sucesso!")
+
+
+if __name__ == "__main__":
+    main()
