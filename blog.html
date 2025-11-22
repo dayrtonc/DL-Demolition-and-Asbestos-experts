@@ -14,6 +14,38 @@
   <meta property="og:url" content="https://breathesafe.com.au/blog">
   <meta property="og:type" content="website">
   
+  <!-- Schema.org Structured Data for Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "DL Demolition Blog",
+    "description": "Expert insights on asbestos removal, demolition safety, and Australian regulations from Gold Coast's trusted professionals.",
+    "url": "https://breathesafe.com.au/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "DL Demolition and Asbestos Experts",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://breathesafe.com.au/assets/images/logo_header_optimized.png"
+      },
+      "url": "https://breathesafe.com.au",
+      "telephone": "+61451612742",
+      "email": "hello@dldemolition.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gold Coast",
+        "addressLocality": "Gold Coast",
+        "addressRegion": "QLD",
+        "postalCode": "4217",
+        "addressCountry": "AU"
+      }
+    },
+    "inLanguage": "en-AU",
+    "keywords": "asbestos removal, demolition, Gold Coast, Brisbane, Sunshine Coast, EPA compliance, safety, renovation"
+  }
+  </script>
+  
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_icon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_icon.png" />
@@ -328,6 +360,26 @@
 
 </header>
 
+  <!-- Breadcrumbs -->
+  <nav class="bg-brand-gray border-b border-brand-red/20" aria-label="Breadcrumb">
+    <div class="container mx-auto px-4 py-3">
+      <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" class="text-gray-400 hover:text-brand-red transition-colors" itemprop="item">
+            <span itemprop="name">Home</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li class="text-gray-600">
+          <i class="fas fa-chevron-right text-xs"></i>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span class="text-white" itemprop="name">Blog</span>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ol>
+    </div>
+  </nav>
 
   <!-- Blog Hero Section -->
   <section class="section-padding bg-gradient-to-br from-brand-black via-brand-gray to-brand-black">
@@ -358,7 +410,7 @@
       <div class="featured-article mb-12">
         <div class="grid md:grid-cols-2 gap-0">
           <div class="relative">
-            <img src="assets/images/asbestos_removal_service.jpg" alt="Featured Article" class="w-full h-64 md:h-full object-cover">
+            <img src="assets/images/asbestos_removal_service.jpg" alt="Licensed asbestos removal service Gold Coast - EPA compliant professionals" class="w-full h-64 md:h-full object-cover">
             <div class="absolute top-4 left-4">
               <span class="category-tag">Featured</span>
             </div>
@@ -400,7 +452,7 @@
             
             <!-- Article 1 -->
             <article class="blog-card rounded-lg overflow-hidden">
-              <img src="assets/images/roof_asbestos_removal_male.jpg" alt="Asbestos Roof Removal" class="w-full h-48 object-cover">
+              <img src="assets/images/roof_asbestos_removal_male.jpg" alt="Professional asbestos roof removal Gold Coast - Class B licensed" class="w-full h-48 object-cover">
               <div class="card-padding">
                 <div class="flex items-center gap-2 mb-3">
                   <span class="category-tag">Safety</span>
@@ -424,7 +476,7 @@
 
             <!-- Article 2 -->
             <article class="blog-card rounded-lg overflow-hidden">
-              <img src="assets/images/internal_stripout.jpg" alt="Demolition Safety" class="w-full h-48 object-cover">
+              <img src="assets/images/internal_stripout.jpg" alt="Safe demolition practices Brisbane - EPA compliance Queensland" class="w-full h-48 object-cover">
               <div class="card-padding">
                 <div class="flex items-center gap-2 mb-3">
                   <span class="category-tag">Demolition</span>
@@ -448,7 +500,7 @@
 
             <!-- Article 3 -->
             <article class="blog-card rounded-lg overflow-hidden">
-              <img src="assets/images/floor_preparation_service.jpg" alt="Floor Preparation" class="w-full h-48 object-cover">
+              <img src="assets/images/floor_preparation_service.jpg" alt="Floor preparation and tile removal Sunshine Coast - professional grinding service" class="w-full h-48 object-cover">
               <div class="card-padding">
                 <div class="flex items-center gap-2 mb-3">
                   <span class="category-tag">Renovation</span>
@@ -472,7 +524,7 @@
 
             <!-- Article 4 -->
             <article class="blog-card rounded-lg overflow-hidden">
-              <img src="assets/images/bathroom_before_clean.jpg" alt="Bathroom Renovation" class="w-full h-48 object-cover">
+              <img src="assets/images/bathroom_before_clean.jpg" alt="Bathroom demolition Gold Coast - asbestos safety in older homes" class="w-full h-48 object-cover">
               <div class="card-padding">
                 <div class="flex items-center gap-2 mb-3">
                   <span class="category-tag">Residential</span>
@@ -496,7 +548,7 @@
 
             <!-- Article 5 -->
             <article class="blog-card rounded-lg overflow-hidden">
-              <img src="assets/images/kitchen_before_clean.jpg" alt="Kitchen Demolition" class="w-full h-48 object-cover">
+              <img src="assets/images/kitchen_before_clean.jpg" alt="Commercial kitchen strip-out Brisbane - health and safety regulations" class="w-full h-48 object-cover">
               <div class="card-padding">
                 <div class="flex items-center gap-2 mb-3">
                   <span class="category-tag">Commercial</span>
@@ -520,7 +572,7 @@
 
             <!-- Article 6 -->
             <article class="blog-card rounded-lg overflow-hidden">
-              <img src="assets/images/bedroom_demolished.jpg" alt="Strip Out Services" class="w-full h-48 object-cover">
+              <img src="assets/images/bedroom_demolished.jpg" alt="Complete strip-out services Gold Coast - renovation preparation" class="w-full h-48 object-cover">
               <div class="card-padding">
                 <div class="flex items-center gap-2 mb-3">
                   <span class="category-tag">Services</span>
@@ -637,11 +689,11 @@
               Get professional advice for your asbestos removal or demolition project.
             </p>
             <div class="space-y-3">
-              <a href="tel:+61432293589" class="flex items-center gap-3 text-white hover:text-brand-red transition-colors">
+              <a href="tel:+61451612742" class="flex items-center gap-3 text-white hover:text-brand-red transition-colors">
                 <i class="fas fa-phone text-brand-red"></i>
-                <span>(61) 432 293 589</span>
+                <span>(61) 451 612 742</span>
               </a>
-              <a href="https://wa.me/61432293589" class="flex items-center gap-3 text-white hover:text-brand-red transition-colors">
+              <a href="https://wa.me/61451612742" class="flex items-center gap-3 text-white hover:text-brand-red transition-colors">
                 <i class="fab fa-whatsapp text-brand-red"></i>
                 <span>WhatsApp Chat</span>
               </a>
