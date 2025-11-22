@@ -36,6 +36,43 @@
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" />
+  
+  <style>
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(225, 6, 0, 0.3);
+    }
+    
+    .project-card img {
+      transition: transform 0.5s ease;
+    }
+    
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+    
+    .project-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .project-card:hover .project-overlay {
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
 <body class="bg-brand-black text-white">
@@ -61,7 +98,7 @@
           <a href="services.html" class="text-white hover:text-brand-red transition-colors">Services</a>
           <a href="calculator.html" class="text-white hover:text-brand-red transition-colors">Calculator</a>
           <a href="about.html" class="text-white hover:text-brand-red transition-colors">About</a>
-          <a href="projects.html" class="text-brand-red border-b-2 border-brand-red">Projects</a>
+          <a href="projects.html" class="text-brand-red border-b-2 border-brand-red font-medium">Projects</a>
           <a href="reviews.html" class="text-white hover:text-brand-red transition-colors">Reviews</a>
           <a href="blog.html" class="text-white hover:text-brand-red transition-colors">Blog</a>
         </nav>
@@ -84,11 +121,11 @@
       <h1 class="text-4xl md:text-5xl font-bold mb-6">
         Our <span class="text-brand-red">Completed Projects</span>
       </h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-        View our portfolio of successfully completed asbestos removal and demolition projects across Gold Coast, Brisbane and Sunshine Coast.
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+        Premium quality demolition and asbestos removal across Gold Coast, Brisbane and Sunshine Coast. Every project completed with zero accidents and 100% client satisfaction.
       </p>
       
-      <div class="grid grid-cols-3 gap-8 mt-12 max-w-2xl mx-auto">
+      <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
         <div>
           <div class="text-4xl font-bold text-brand-red">100+</div>
           <div class="text-gray-400">Projects Completed</div>
@@ -105,49 +142,171 @@
     </div>
   </section>
 
-  <!-- Projects Coming Soon -->
+  <!-- Featured Projects Gallery -->
   <section class="py-20">
     <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center bg-brand-gray/50 rounded-2xl p-12 border border-brand-red/20">
-        <i class="fas fa-camera text-6xl text-brand-red mb-6"></i>
-        <h2 class="text-3xl font-bold mb-4">Project Gallery Coming Soon</h2>
-        <p class="text-xl text-gray-300 mb-8">
-          We're currently building our project gallery with before/after photos and detailed case studies of our completed work.
-        </p>
-        
-        <div class="grid md:grid-cols-2 gap-6 text-left mb-8">
-          <div class="bg-brand-black/50 p-6 rounded-lg">
-            <h3 class="text-xl font-bold text-brand-red mb-3">
-              <i class="fas fa-hard-hat mr-2"></i>Asbestos Removal Projects
-            </h3>
-            <ul class="space-y-2 text-gray-300">
-              <li><i class="fas fa-check text-brand-red mr-2"></i>Residential roof asbestos removal</li>
-              <li><i class="fas fa-check text-brand-red mr-2"></i>Commercial building asbestos abatement</li>
-              <li><i class="fas fa-check text-brand-red mr-2"></i>Internal wall and ceiling asbestos</li>
-              <li><i class="fas fa-check text-brand-red mr-2"></i>Floor tile asbestos removal</li>
-            </ul>
-          </div>
-          
-          <div class="bg-brand-black/50 p-6 rounded-lg">
-            <h3 class="text-xl font-bold text-brand-red mb-3">
-              <i class="fas fa-hammer mr-2"></i>Demolition Projects
-            </h3>
-            <ul class="space-y-2 text-gray-300">
-              <li><i class="fas fa-check text-brand-red mr-2"></i>Complete house demolitions</li>
-              <li><i class="fas fa-check text-brand-red mr-2"></i>Commercial strip-outs</li>
-              <li><i class="fas fa-check text-brand-red mr-2"></i>Kitchen and bathroom demolition</li>
-              <li><i class="fas fa-check text-brand-red mr-2"></i>Garage and shed removal</li>
-            </ul>
+      <h2 class="text-3xl font-bold text-center mb-12">Featured <span class="text-brand-red">Projects</span></h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="project-card">
+          <img src="assets/images/gallery-1.webp" alt="Demolition Project Gold Coast" class="w-full h-64 object-cover">
+          <div class="project-overlay">
+            <h3 class="text-lg font-bold text-white">Complete Demolition</h3>
+            <p class="text-sm text-gray-300">Gold Coast</p>
           </div>
         </div>
         
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="quote.html" class="bg-brand-red text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 inline-block">
-            <i class="fas fa-calculator mr-2"></i>Get Your Free Quote
-          </a>
-          <a href="reviews.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-brand-black inline-block">
-            <i class="fas fa-star mr-2"></i>Read Our Reviews
-          </a>
+        <div class="project-card">
+          <img src="assets/images/gallery-2.webp" alt="Asbestos Removal Brisbane" class="w-full h-64 object-cover">
+          <div class="project-overlay">
+            <h3 class="text-lg font-bold text-white">Asbestos Removal</h3>
+            <p class="text-sm text-gray-300">Brisbane</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="assets/images/gallery-3.webp" alt="Strip Out Services" class="w-full h-64 object-cover">
+          <div class="project-overlay">
+            <h3 class="text-lg font-bold text-white">Commercial Strip-Out</h3>
+            <p class="text-sm text-gray-300">Sunshine Coast</p>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="assets/images/gallery-4.webp" alt="Floor Grinding Gold Coast" class="w-full h-64 object-cover">
+          <div class="project-overlay">
+            <h3 class="text-lg font-bold text-white">Floor Grinding</h3>
+            <p class="text-sm text-gray-300">Gold Coast</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before & After Projects -->
+  <section class="py-20 bg-brand-gray/30">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">Before & After <span class="text-brand-red">Transformations</span></h2>
+      <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">See the quality of our work through real project transformations</p>
+      
+      <!-- Kitchen Project -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold mb-6 text-brand-red"><i class="fas fa-utensils mr-2"></i>Kitchen Demolition & Strip-Out</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-brand-black/50 rounded-lg overflow-hidden">
+            <img src="assets/images/kitchen_before.webp" alt="Kitchen Before Demolition" class="w-full h-80 object-cover">
+            <div class="p-4">
+              <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">BEFORE</span>
+              <p class="mt-2 text-gray-400">Original kitchen with tiles and fixtures</p>
+            </div>
+          </div>
+          
+          <div class="bg-brand-black/50 rounded-lg overflow-hidden">
+            <img src="assets/images/kitchen_after.webp" alt="Kitchen After Demolition" class="w-full h-80 object-cover">
+            <div class="p-4">
+              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">AFTER</span>
+              <p class="mt-2 text-gray-400">Complete strip-out, grinding and make-good</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bathroom Project -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold mb-6 text-brand-red"><i class="fas fa-bath mr-2"></i>Bathroom Renovation Prep</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-brand-black/50 rounded-lg overflow-hidden">
+            <img src="assets/images/bathroom_before.webp" alt="Bathroom Before Demolition" class="w-full h-80 object-cover">
+            <div class="p-4">
+              <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">BEFORE</span>
+              <p class="mt-2 text-gray-400">Old bathroom with dated fixtures</p>
+            </div>
+          </div>
+          
+          <div class="bg-brand-black/50 rounded-lg overflow-hidden">
+            <img src="assets/images/bathroom_after.webp" alt="Bathroom After Demolition" class="w-full h-80 object-cover">
+            <div class="p-4">
+              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">AFTER</span>
+              <p class="mt-2 text-gray-400">Ready for renovation - clean and level</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Garage Project -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold mb-6 text-brand-red"><i class="fas fa-warehouse mr-2"></i>Garage Demolition</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-brand-black/50 rounded-lg overflow-hidden">
+            <img src="assets/images/garage_before.webp" alt="Garage Before Demolition" class="w-full h-80 object-cover">
+            <div class="p-4">
+              <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">BEFORE</span>
+              <p class="mt-2 text-gray-400">Old garage structure</p>
+            </div>
+          </div>
+          
+          <div class="bg-brand-black/50 rounded-lg overflow-hidden">
+            <img src="assets/images/garage_after.webp" alt="Garage After Demolition" class="w-full h-80 object-cover">
+            <div class="p-4">
+              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">AFTER</span>
+              <p class="mt-2 text-gray-400">Complete removal and site cleanup</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Office Project -->
+      <div>
+        <h3 class="text-2xl font-bold mb-6 text-brand-red"><i class="fas fa-building mr-2"></i>Commercial Office Strip-Out</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-brand-black/50 rounded-lg overflow-hidden">
+            <img src="assets/images/office_before.webp" alt="Office Before Strip-Out" class="w-full h-80 object-cover">
+            <div class="p-4">
+              <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">BEFORE</span>
+              <p class="mt-2 text-gray-400">Commercial office space</p>
+            </div>
+          </div>
+          
+          <div class="bg-brand-black/50 rounded-lg overflow-hidden">
+            <img src="assets/images/office_after.webp" alt="Office After Strip-Out" class="w-full h-80 object-cover">
+            <div class="p-4">
+              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">AFTER</span>
+              <p class="mt-2 text-gray-400">Professional strip-out completed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Showcase -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our <span class="text-brand-red">Services in Action</span></h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-brand-gray/50 rounded-lg overflow-hidden">
+          <img src="assets/images/demolition_work.webp" alt="Demolition Services" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Demolition Services</h3>
+            <p class="text-gray-400">Complete house and structure demolition with EPA compliance</p>
+          </div>
+        </div>
+        
+        <div class="bg-brand-gray/50 rounded-lg overflow-hidden">
+          <img src="assets/images/floor_grinding.webp" alt="Floor Grinding Services" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Floor Grinding</h3>
+            <p class="text-gray-400">Professional concrete grinding and floor preparation</p>
+          </div>
+        </div>
+        
+        <div class="bg-brand-gray/50 rounded-lg overflow-hidden">
+          <img src="assets/images/tile_removal.webp" alt="Tile Removal Services" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Tile Removal</h3>
+            <p class="text-gray-400">Fast and efficient tile removal with bedding extraction</p>
+          </div>
         </div>
       </div>
     </div>
@@ -169,10 +328,10 @@
         
         <div class="text-center">
           <div class="bg-brand-red/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-clock text-3xl text-brand-red"></i>
+            <i class="fas fa-users text-3xl text-brand-red"></i>
           </div>
-          <h3 class="text-xl font-bold mb-2">24/7 Emergency Response</h3>
-          <p class="text-gray-400">Available when you need us most</p>
+          <h3 class="text-xl font-bold mb-2">2-Man Premium Crew</h3>
+          <p class="text-gray-400">Professional team on every job</p>
         </div>
         
         <div class="text-center">
@@ -195,10 +354,10 @@
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="quote.html" class="bg-brand-red text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 inline-block">
-          Get Free Quote
+          <i class="fas fa-calculator mr-2"></i>Get Free Quote
         </a>
         <a href="tel:+61451612742" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-brand-black inline-block">
-          Call (61) 451 612 742
+          <i class="fas fa-phone mr-2"></i>Call (61) 451 612 742
         </a>
       </div>
     </div>
