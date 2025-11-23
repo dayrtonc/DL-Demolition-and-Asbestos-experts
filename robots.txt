@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://dldemolition.com.au/sitemap.xml
+Sitemap: https://www.dldemolition.com.au/sitemap.xml
 
 # Disallow admin areas (if any)
 Disallow: /admin/
