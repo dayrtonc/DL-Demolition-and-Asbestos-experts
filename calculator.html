@@ -924,7 +924,8 @@
           <a href="quote.html" class="block w-full bg-brand-red text-white py-3 rounded-lg font-bold text-center hover:bg-red-700 transition-colors">
             <i class="fas fa-file-alt mr-2"></i>Get Detailed Quote
           </a>
-          <a href="${whatsappUrl}"
+          <a id="whatsappButton"
+             href="#"
              target="_blank"
              rel="noopener noreferrer"
              class="block w-full bg-brand-green text-white py-3 rounded-lg font-bold text-center hover:bg-green-700 transition-colors">
@@ -934,6 +935,9 @@
       `;
 
       breakdownDiv.classList.remove('hidden');
+      
+      // Update WhatsApp button href
+      document.querySelector('#whatsappButton').href = whatsappUrl;
     }
 
   </script>

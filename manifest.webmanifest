@@ -124,13 +124,6 @@
       ]
     }
   ],
-  "related_applications": [
-    {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=au.com.breathesafe.twa",
-      "id": "au.com.breathesafe.twa"
-    }
-  ],
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
