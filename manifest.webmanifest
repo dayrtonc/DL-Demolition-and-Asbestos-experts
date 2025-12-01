@@ -101,7 +101,7 @@
       "name": "Call Now",
       "short_name": "Call",
       "description": "Call us for immediate assistance",
-      "url": "tel:+61451612742",
+      "url": "tel:+61756999693",
       "icons": [
         {
           "src": "assets/images/icon-phone.png",
@@ -114,7 +114,7 @@
       "name": "WhatsApp",
       "short_name": "WhatsApp",
       "description": "Contact us via WhatsApp",
-      "url": "https://wa.me/61451612742?text=Hello!%20I%20need%20a%20quote%20for%20asbestos%20removal%20or%20demolition.",
+      "url": "https://wa.me/61756999693?text=Hello!%20I%20need%20a%20quote%20for%20asbestos%20removal%20or%20demolition.",
       "icons": [
         {
           "src": "assets/images/icon-whatsapp.png",
