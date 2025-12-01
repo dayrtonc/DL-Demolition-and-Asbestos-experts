@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Main Pages -->
+  <!-- ========================================
+       MAIN PAGES (High Priority)
+       ======================================== -->
+  
+  <!-- Homepage -->
   <url>
     <loc>https://www.dldemolition.com.au/</loc>
     <lastmod>2025-12-01</lastmod>
@@ -9,6 +14,7 @@
     <priority>1.0</priority>
   </url>
   
+  <!-- Services Page -->
   <url>
     <loc>https://www.dldemolition.com.au/services.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -16,6 +22,7 @@
     <priority>0.9</priority>
   </url>
   
+  <!-- Price Calculator -->
   <url>
     <loc>https://www.dldemolition.com.au/calculator.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -23,6 +30,19 @@
     <priority>0.9</priority>
   </url>
   
+  <!-- Quote Request Page -->
+  <url>
+    <loc>https://www.dldemolition.com.au/quote.html</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- ========================================
+       SECONDARY PAGES
+       ======================================== -->
+  
+  <!-- About Us -->
   <url>
     <loc>https://www.dldemolition.com.au/about.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -30,6 +50,7 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Projects Portfolio -->
   <url>
     <loc>https://www.dldemolition.com.au/projects.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -37,6 +58,7 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Customer Reviews -->
   <url>
     <loc>https://www.dldemolition.com.au/reviews.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -44,12 +66,9 @@
     <priority>0.8</priority>
   </url>
   
-  <url>
-    <loc>https://www.dldemolition.com.au/quote.html</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- ========================================
+       BLOG SECTION
+       ======================================== -->
   
   <!-- Blog Main Page -->
   <url>
@@ -59,7 +78,15 @@
     <priority>0.7</priority>
   </url>
   
-  <!-- Blog Articles -->
+  <!-- Blog Article: Asbestos Removal Regulations Queensland 2025 -->
+  <url>
+    <loc>https://www.dldemolition.com.au/blog-asbestos-removal-queensland.html</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Blog Article: Complete Asbestos Removal Guide -->
   <url>
     <loc>https://www.dldemolition.com.au/blog-asbestos-removal-guide.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -67,6 +94,7 @@
     <priority>0.6</priority>
   </url>
   
+  <!-- Blog Article: Signs of Roof Asbestos -->
   <url>
     <loc>https://www.dldemolition.com.au/blog-signs-roof-asbestos.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -74,6 +102,7 @@
     <priority>0.6</priority>
   </url>
   
+  <!-- Blog Article: Safe Demolition EPA Guidelines -->
   <url>
     <loc>https://www.dldemolition.com.au/blog-safe-demolition-epa.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -81,6 +110,7 @@
     <priority>0.6</priority>
   </url>
   
+  <!-- Blog Article: Floor Preparation and Tile Removal -->
   <url>
     <loc>https://www.dldemolition.com.au/blog-floor-preparation-tile-removal.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -88,6 +118,7 @@
     <priority>0.6</priority>
   </url>
   
+  <!-- Blog Article: Bathroom Renovation Safety -->
   <url>
     <loc>https://www.dldemolition.com.au/blog-bathroom-renovation-safety.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -95,6 +126,7 @@
     <priority>0.6</priority>
   </url>
   
+  <!-- Blog Article: Commercial Kitchen Strip-Out -->
   <url>
     <loc>https://www.dldemolition.com.au/blog-commercial-kitchen-strip-out.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -102,6 +134,7 @@
     <priority>0.6</priority>
   </url>
   
+  <!-- Blog Article: Complete Strip-Out Services -->
   <url>
     <loc>https://www.dldemolition.com.au/blog-complete-strip-out-services.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -109,6 +142,7 @@
     <priority>0.6</priority>
   </url>
   
+  <!-- Blog Article: Emergency Asbestos Response -->
   <url>
     <loc>https://www.dldemolition.com.au/blog-emergency-asbestos-response.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -116,6 +150,7 @@
     <priority>0.6</priority>
   </url>
   
+  <!-- Blog Article: Cost Factors in Demolition -->
   <url>
     <loc>https://www.dldemolition.com.au/blog-cost-factors-demolition.html</loc>
     <lastmod>2025-12-01</lastmod>
@@ -123,15 +158,9 @@
     <priority>0.6</priority>
   </url>
   
+  <!-- Blog Article: Choosing the Right Contractor -->
   <url>
     <loc>https://www.dldemolition.com.au/blog-choosing-right-contractor.html</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.dldemolition.com.au/blog-asbestos-removal-queensland.html</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
