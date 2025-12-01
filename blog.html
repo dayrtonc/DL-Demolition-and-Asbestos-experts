@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GBXQJ78CT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4GBXQJ78CT');
+  </script>
   <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -274,7 +282,7 @@
 
 <body>
   <!-- Sticky Header -->
-<header class="bg-brand-gray/95 backdrop-blur-sm sticky top-0 z-50 border-b border-brand-red/20"> 
+<header role="banner" class="bg-brand-gray/95 backdrop-blur-sm sticky top-0 z-50 border-b border-brand-red/20"> 
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between py-4">
       
@@ -286,7 +294,7 @@
       </div>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center space-x-8">
+      <nav role="navigation" class="hidden lg:flex items-center space-x-8">
         <a href="/" class="text-white hover:text-brand-red transition-colors font-medium">Home</a>
         <a href="services.html" class="text-white hover:text-brand-red transition-colors font-medium">Services</a>
         <a href="calculator.html" class="text-white hover:text-brand-red transition-colors font-medium">Calculator</a>
@@ -303,7 +311,7 @@
 
       <!-- Contact Info & CTA -->
       <div class="hidden lg:flex items-center space-x-4">
-        <a href="tel:0756999693" class="text-brand-red font-bold hover:text-white transition-colors">
+        <a aria-label="Call us now" href="tel:0756999693" class="text-brand-red font-bold hover:text-white transition-colors">
           <i class="fas fa-phone mr-2"></i>07 5699 9693
         </a>
         <a href="quote.html"
@@ -313,7 +321,7 @@
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-brand-red transition-colors">
+      <button aria-label="Bars" id="mobile-menu-btn" class="lg:hidden text-white hover:text-brand-red transition-colors">
         <i class="fas fa-bars text-xl"></i>
       </button>
 
@@ -326,7 +334,7 @@
 
       <div class="flex items-center justify-between mb-8">
         <img src="assets/images/logo_header_optimized.png" loading="lazy" decoding="async" alt="DL Demolition" class="h-10">
-        <button id="close-mobile-menu" class="text-white hover:text-brand-red">
+        <button aria-label="Times" id="close-mobile-menu" class="text-white hover:text-brand-red">
           <i class="fas fa-times text-xl"></i>
         </button>
       </div>
@@ -349,10 +357,10 @@
       </nav>
 
       <div class="mt-8 pt-8 border-t border-gray-600">
-        <a href="tel:0756999693" class="block text-brand-red font-bold text-lg mb-4">
+        <a aria-label="Call us now" href="tel:0756999693" class="block text-brand-red font-bold text-lg mb-4">
           <i class="fas fa-phone mr-2"></i>07 5699 9693
         </a>
-        <a href="https://wa.me/61756999693"
+        <a aria-label="Contact us on WhatsApp" href="https://wa.me/61756999693"
            class="block bg-brand-green text-white px-4 py-2 rounded-lg text-center font-bold">
           <i class="fab fa-whatsapp mr-2"></i>WhatsApp Us
         </a>
@@ -823,11 +831,11 @@
               Get professional advice for your asbestos removal or demolition project.
             </p>
             <div class="space-y-3">
-              <a href="tel:0756999693" class="flex items-center gap-3 text-white hover:text-brand-red transition-colors">
+              <a aria-label="Call us now" href="tel:0756999693" class="flex items-center gap-3 text-white hover:text-brand-red transition-colors">
                 <i class="fas fa-phone text-brand-red"></i>
                 <span>07 5699 9693</span>
               </a>
-              <a href="https://wa.me/61756999693" class="flex items-center gap-3 text-white hover:text-brand-red transition-colors">
+              <a aria-label="Contact us on WhatsApp" href="https://wa.me/61756999693" class="flex items-center gap-3 text-white hover:text-brand-red transition-colors">
                 <i class="fab fa-whatsapp text-brand-red"></i>
                 <span>WhatsApp Chat</span>
               </a>
@@ -845,7 +853,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-brand-gray border-t border-brand-red/20 py-12">
+  <footer role="contentinfo" class="bg-brand-gray border-t border-brand-red/20 py-12">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Company Info -->
@@ -899,11 +907,11 @@
           <div class="space-y-3">
             <div class="flex items-center space-x-3">
               <i class="fas fa-phone text-brand-red"></i>
-              <a href="tel:0756999693" class="hover:text-brand-red transition-colors">07 5699 9693</a>
+              <a aria-label="Call us now" href="tel:0756999693" class="hover:text-brand-red transition-colors">07 5699 9693</a>
             </div>
             <div class="flex items-center space-x-3">
               <i class="fab fa-whatsapp text-brand-green"></i>
-              <a href="https://wa.me/61756999693" class="hover:text-brand-red transition-colors">WhatsApp</a>
+              <a aria-label="Contact us on WhatsApp" href="https://wa.me/61756999693" class="hover:text-brand-red transition-colors">WhatsApp</a>
             </div>
             <div class="flex items-center space-x-3">
               <i class="fas fa-envelope text-brand-red"></i>
