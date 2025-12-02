@@ -12,13 +12,13 @@
 
 const FORMSPREE_CONFIG = {
   // Main contact form endpoint
-  contactFormId: 'YOUR_FORM_ID',
+  contactFormId: 'mldqnnyp',
   
   // Quote request form endpoint (can be same or different)
-  quoteFormId: 'YOUR_FORM_ID',
+  quoteFormId: 'mldqnnyp',
   
   // Calculator form endpoint
-  calculatorFormId: 'YOUR_FORM_ID',
+  calculatorFormId: 'mldqnnyp',
   
   // Base URL for Formspree
   baseUrl: 'https://formspree.io/f/',
