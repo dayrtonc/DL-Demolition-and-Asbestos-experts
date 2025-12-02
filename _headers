@@ -1,0 +1,39 @@
+# Security Headers for DL Demolition Website
+# Compatible with Netlify, Cloudflare Pages, and other static hosts
+
+/*
+  # Content Security Policy - Prevents XSS and injection attacks
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.googletagmanager.com https://www.google-analytics.com https://formspree.io; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://formspree.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io;
+  
+  # Prevent clickjacking attacks
+  X-Frame-Options: DENY
+  
+  # Prevent MIME type sniffing
+  X-Content-Type-Options: nosniff
+  
+  # Enable XSS protection in older browsers
+  X-XSS-Protection: 1; mode=block
+  
+  # Referrer policy - control information sent to other sites
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Permissions policy - control browser features
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  
+  # Strict Transport Security - Force HTTPS
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  
+  # Cache control for static assets
+  Cache-Control: public, max-age=31536000, immutable
+
+# Specific headers for HTML pages
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Service Worker - no cache
+/service-worker.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Manifest file
+/manifest.webmanifest
+  Cache-Control: public, max-age=86400

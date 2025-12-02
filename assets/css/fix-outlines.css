@@ -1,0 +1,55 @@
+/**
+ * Fix for dotted borders appearing on all interactive elements
+ * This removes the unwanted outline/border styling
+ */
+
+/* Remove all dotted/dashed outlines and borders globally */
+*,
+*:focus,
+*:active,
+*:hover {
+  outline-style: none !important;
+}
+
+/* Ensure buttons don't have dotted borders */
+button,
+button:focus,
+button:active,
+a,
+a:focus,
+a:active,
+input,
+input:focus,
+input:active,
+select,
+select:focus,
+select:active,
+textarea,
+textarea:focus,
+textarea:active {
+  outline: none !important;
+  outline-style: none !important;
+}
+
+/* Override high contrast mode that was causing the issue */
+@media (prefers-contrast: high) {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    outline: none !important;
+    outline-offset: 0 !important;
+  }
+}
+
+/* Maintain accessibility with focus styles using solid borders instead */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #e10600 !important;
+  outline-style: solid !important;
+  outline-offset: 2px !important;
+}

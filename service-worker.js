@@ -3,7 +3,7 @@
  * Handles caching and offline functionality
  */
 
-const CACHE_NAME = 'dl-demolition-v1.0.0';
+const CACHE_NAME = 'dl-demolition-v1.1.0';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache on install
@@ -19,11 +19,21 @@ const STATIC_CACHE_URLS = [
   '/offline.html',
   '/manifest.webmanifest',
   '/assets/css/mobile-styles.css',
+  '/assets/css/fix-outlines.css',
   '/assets/js/form-validation.js',
   '/assets/js/pwa-install.js',
+  '/assets/images/logo_header_optimized.png',
+  '/assets/images/og-image.jpg',
+  '/assets/images/favicon_icon.png',
+  '/assets/images/apple-touch-icon.png',
+  '/assets/images/icon-192.png',
+  '/assets/images/icon-512.png',
   'https://cdn.tailwindcss.com',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css'
 ];
+
+// Image extensions to cache dynamically
+const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.webp', '.gif', '.svg'];
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
@@ -70,8 +80,37 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
   
-  // Skip cross-origin requests
-  if (url.origin !== location.origin) {
+  // Skip cross-origin requests except for CDN resources
+  if (url.origin !== location.origin && !url.href.includes('cdn')) {
+    return;
+  }
+  
+  // Check if request is for an image
+  const isImage = IMAGE_EXTENSIONS.some(ext => url.pathname.toLowerCase().endsWith(ext));
+  
+  // Cache images with cache-first strategy
+  if (isImage) {
+    event.respondWith(
+      caches.match(request)
+        .then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse;
+          }
+          return fetch(request)
+            .then((response) => {
+              if (response.status === 200) {
+                const responseClone = response.clone();
+                caches.open(CACHE_NAME).then((cache) => {
+                  cache.put(request, responseClone);
+                });
+              }
+              return response;
+            })
+            .catch((error) => {
+              console.error('[Service Worker] Image fetch failed:', error);
+            });
+        })
+    );
     return;
   }
   

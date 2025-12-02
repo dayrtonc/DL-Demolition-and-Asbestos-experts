@@ -34,7 +34,7 @@ const FORMSPREE_CONFIG = {
         
         We've received your inquiry and will get back to you within 24 hours.
         
-        For urgent matters, please call us at (61) 451 612 742 or WhatsApp us.
+        For urgent matters, please call us at 07 5699 9693 or WhatsApp us.
         
         Best regards,
         DL Demolition Team
