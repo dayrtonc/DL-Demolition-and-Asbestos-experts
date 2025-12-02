@@ -1,0 +1,8 @@
+Contact: mailto:hello@dldemolition.com.au
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://dldemolition.com.au/.well-known/security.txt
+
+# Security Policy
+# If you discover a security vulnerability, please report it to us.
+# We appreciate responsible disclosure and will respond within 48 hours.
