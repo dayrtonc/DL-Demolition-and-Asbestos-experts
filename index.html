@@ -11,7 +11,10 @@
     gtag('config', 'G-4GBXQJ78CT');
   </script>
   <meta charset="utf-8" />
-    <!-- Preconnect to CDNs for faster resource loading -->
+  <!-- Preload critical hero logo for faster LCP -->
+  <link rel="preload" as="image" href="assets/images/logo_header_optimized.png" fetchpriority="high">
+  
+  <!-- Preconnect to CDNs for faster resource loading -->
   <link rel="preconnect" href="https://cdn.tailwindcss.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -240,11 +243,10 @@
     }
   </script>
 
-  <!-- Font Awesome - Preload for faster rendering -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  <!-- Font Awesome - Critical for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
   <!-- Custom Styles -->
@@ -988,6 +990,14 @@
       if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
         mobileMenu.classList.remove('open');
       }
+    });
+
+    // Close mobile menu when clicking on any link inside it
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
     });
 
     // Back to Top Button
