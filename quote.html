@@ -254,7 +254,7 @@
         <div class="bg-brand-gray/50 rounded-2xl p-8 border border-white/10">
           <h2 class="text-3xl font-bold text-white mb-8">Request Your Free Quote</h2>
           
-          <form id="detailed-quote-form" class="space-y-6">
+          <form id="detailed-quote-form" data-formspree="quote" class="space-y-6">
             <!-- Personal Information -->
             <div class="grid md:grid-cols-2 gap-4">
               <div>
@@ -520,7 +520,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Company Info -->
                 <div class="flex flex-col items-center text-center">
-          <img src="assets/images/logo_header_optimized.png" width="300" height="199" loading="lazy" decoding="async" alt="DL Demolition" class="h-28 mb-4 mx-auto">
+          <img src="assets/images/logo_header_optimized.png" width="200" height="133" loading="lazy" decoding="async" alt="DL Demolition" class="w-48 h-auto mb-4 mx-auto">
 
           <p class="text-gray-400 mb-4 max-w-xs">
             Licensed asbestos removal and demolition specialists serving Gold Coast to Sunshine Coast.
@@ -680,36 +680,35 @@
 
     
     // Quote form functionality
-    document.getElementById('detailed-quote-form').addEventListener('submit', function(e) {
+    document.getElementById('detailed-quote-form').addEventListener('submit', async function(e) {
       e.preventDefault();
       
       const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
+      const submitButton = this.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.innerHTML;
       
-      // Create WhatsApp message
-      const message = `Hello! I'd like to request a detailed quote.
-
-📋 CONTACT DETAILS:
-Name: ${data.fullName}
-Phone: ${data.phone}
-Email: ${data.email}
-Address: ${data.location}
-
-🏗️ PROJECT DETAILS:
-Service: ${data.service}
-Property Type: ${data.propertyType}
-Urgency: ${data.urgency}
-Description: ${data.description}
-
-📞 Preferred Contact: ${data.contactMethod}
-
-Please provide a detailed quote for this project. Thank you!`;
+      // Disable button and show loading state
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
       
-      const whatsappUrl = `https://wa.me/61756999693?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
-      
-      // Show success message
-      alert('Thank you! Your quote request has been submitted. You will be redirected to WhatsApp to complete the process.');
+      try {
+        const result = await submitToFormspree(formData, 'quote');
+        
+        if (result.success) {
+          // Show success message
+          alert('Thank you! Your detailed quote request has been sent successfully. We will contact you within 24 hours.');
+          this.reset();
+        } else {
+          // Show error message
+          alert('Sorry, there was an error sending your request. Please try again or call us at 07 5699 9693.');
+        }
+      } catch (error) {
+        alert('Sorry, there was an error sending your request. Please try again or call us at 07 5699 9693.');
+      } finally {
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      }
     });
 
     // File upload functionality
@@ -754,5 +753,8 @@ Please provide a detailed quote for this project. Thank you!`;
     }
     
   </script>
+  
+  <!-- Formspree Configuration -->
+  <script src="assets/js/formspree-config.js" defer></script>
 </body>
 </html>

@@ -478,7 +478,7 @@
               <p class="text-gray-300">Guaranteed response within 24 hours</p>
             </div>
 
-            <form id="quote-form" class="space-y-4">
+            <form id="quote-form" data-formspree="quote" class="space-y-4">
               <div class="grid md:grid-cols-2 gap-4">
                 <div>
                   <label for="fullName" class="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
@@ -801,7 +801,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Company Info -->
         <div class="flex flex-col items-center text-center">
-          <img src="assets/images/logo_header_optimized.png" width="300" height="199" loading="lazy" decoding="async" alt="DL Demolition" class="h-28 mb-4 mx-auto">
+          <img src="assets/images/logo_header_optimized.png" width="200" height="133" loading="lazy" decoding="async" alt="DL Demolition" class="w-48 h-auto mb-4 mx-auto">
           <p class="text-gray-400 mb-4 max-w-xs">
             Licensed asbestos removal and demolition specialists serving Gold Coast to Sunshine Coast.
           </p>
@@ -1023,23 +1023,35 @@
     });
 
     // Quote Form Handling
-    document.getElementById('quote-form').addEventListener('submit', function (e) {
+    document.getElementById('quote-form').addEventListener('submit', async function (e) {
       e.preventDefault();
 
       const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
+      const submitButton = this.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.innerHTML;
+      
+      // Disable button and show loading state
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
 
-      // Create WhatsApp message
-      const message = `Hello! I'd like to request a quote for ${data.service}.
-
-Name: ${data.fullName}
-Phone: ${data.phone}
-Email: ${data.email || 'Not provided'}
-Location: ${data.location || 'Not provided'}
-Description: ${data.description || 'Not provided'}`;
-
-      const whatsappUrl = `https://wa.me/61756999693?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
+      try {
+        const result = await submitToFormspree(formData, 'quote');
+        
+        if (result.success) {
+          // Show success message
+          alert('Thank you! Your quote request has been sent successfully. We will contact you within 24 hours.');
+          this.reset();
+        } else {
+          // Show error message
+          alert('Sorry, there was an error sending your request. Please try again or call us at 07 5699 9693.');
+        }
+      } catch (error) {
+        alert('Sorry, there was an error sending your request. Please try again or call us at 07 5699 9693.');
+      } finally {
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      }
     });
 
     // Chatbot Functionality
