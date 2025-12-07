@@ -1,251 +1,221 @@
-# DL Demolition and Asbestos Experts - Official Website
+# DL Demolition and Asbestos Experts - Website Oficial
 
-[![Status](https://img.shields.io/badge/status-live-success?style=for-the-badge)](https://www.dldemolition.com.au)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
-[![Tech Stack](https://img.shields.io/badge/tech-HTML,_Tailwind_CSS,_JS-yellowgreen?style=for-the-badge)](https://github.com/dayrtonc/DL-Demolition-and-Asbestos-experts)
+![Logo da DL Demolition](https://www.dldemolition.com.au/assets/images/logo_header_optimized.png)
 
-Official website for **DL Demolition and Asbestos Experts Pty Ltd** (ABN: 40 693 228 321), a licensed and insured demolition and asbestos removal company based in Southport, QLD. This project is a static, fully responsive, and SEO-optimized website designed to generate leads and establish the company's brand as a trusted, compliant, and professional service provider across Gold Coast, Brisbane, and Sunshine Coast regions.
+[![Status do Site](https://img.shields.io/website?down_message=offline&label=dldemolition.com.au&style=for-the-badge&up_message=online&url=https%3A%2F%2Fwww.dldemolition.com.au)](https://www.dldemolition.com.au) [![Licença](https://img.shields.io/github/license/dayrtonc/DL-Demolition-and-Asbestos-experts?style=for-the-badge)](LICENSE) [![Tech Stack](https://img.shields.io/badge/tech-HTML_&_Tailwind_CSS-blue?style=for-the-badge)](https://tailwindcss.com/)
 
 ---
 
-## 📋 Table of Contents
+Este repositório contém o código-fonte do site oficial da **DL Demolition and Asbestos Experts Pty Ltd**, uma empresa licenciada e segurada de demolição e remoção de amianto com sede em Southport, QLD, Austrália. O projeto é um site estático, totalmente responsivo e otimizado para SEO, projetado para gerar leads qualificados e estabelecer a marca da empresa como um provedor de serviços confiável, em conformidade com as regulamentações e profissional nas regiões de Gold Coast, Brisbane e Sunshine Coast.
 
-1. [Overview](#-overview)
-2. [Live Demo](#-live-demo)
-3. [Key Features](#-key-features)
-4. [Tech Stack](#-tech-stack)
-5. [Project Structure](#-project-structure)
-6. [Setup and Local Development](#-setup-and-local-development)
-7. [Deployment](#-deployment)
-8. [Maintenance Guide](#-maintenance-guide)
-9. [SEO & Analytics](#-seo--analytics)
-10. [License](#-license)
+## 📋 Índice
 
----
-
-## 🎯 Overview
-
-This repository contains the source code for the official business website of **DL Demolition and Asbestos Experts Pty Ltd**. The site is built with a focus on performance, local SEO, and user experience to effectively convert visitors into qualified leads.
-
-The website prominently features the company's commitment to regulatory compliance in Queensland, including adherence to the **Work Health and Safety Regulation 2011 (QLD)** and the **'How to Safely Remove Asbestos' Code of Practice 2021**. The content strategy is built around establishing expertise and trust through detailed service pages, project showcases, and an extensive blog.
-
-### Business Information
-
--   **Company Name:** DL Demolition and Asbestos Experts Pty Ltd
--   **ABN:** 40 693 228 321
--   **Location:** Southport QLD 4215, Australia
--   **Phone:** 07 5699 9693 (Local) | +61 7 5699 9693 (International)
--   **Email:** hello@dldemolition.com.au
--   **Business Hours:**
-    -   Monday–Friday: 7:30am – 5:00pm
-    -   Saturday: 7:30am – 1:00pm
-    -   Sunday: Closed
+1. [Visão Geral](#-visão-geral)
+2. [Demonstração ao Vivo](#-demonstração-ao-vivo)
+3. [Principais Funcionalidades](#-principais-funcionalidades)
+4. [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+5. [Estrutura do Projeto](#-estrutura-do-projeto)
+6. [Configuração e Desenvolvimento Local](#-configuração-e-desenvolvimento-local)
+7. [Implantação (Deploy)](#-implantação-deploy)
+8. [Guia de Manutenção](#-guia-de-manutenção)
+9. [SEO e Analytics](#-seo-e-analytics)
+10. [Licença](#-licença)
 
 ---
 
-## 🌐 Live Demo
+## 🎯 Visão Geral
 
-The website is live at: **[https://www.dldemolition.com.au](https://www.dldemolition.com.au)**
+O site serve como a principal presença digital da **DL Demolition and Asbestos Experts Pty Ltd** (ABN: 40 693 228 321). Foi construído com foco em **performance**, **SEO local** e **experiência do usuário** para converter visitantes em clientes de forma eficaz.
 
----
+Um pilar central do projeto é a ênfase na conformidade com as rigorosas regulamentações de Queensland, incluindo a **Work Health and Safety Regulation 2011 (QLD)** e o **'How to Safely Remove Asbestos' Code of Practice 2021**. A estratégia de conteúdo visa estabelecer autoridade e confiança através de páginas de serviços detalhadas, um portfólio de projetos e um blog informativo.
 
-## ✨ Key Features
+### Informações da Empresa
 
--   **Professional & Responsive Design:** Mobile-first design built with Tailwind CSS for a seamless experience on all devices.
--   **Progressive Web App (PWA):** The site is installable and provides an offline-ready experience, ensuring accessibility and a native-app feel.
--   **Interactive Price Calculator:** A unique feature allowing potential clients to get instant cost estimates for 8 different services, with modifiers for urgency, access difficulty, and location. Results integrate directly with WhatsApp for a frictionless quote process.
--   **Advanced SEO & Schema Markup:** Comprehensive on-page and technical SEO, including unique meta tags, location-based keywords, and structured data (LocalBusiness, Service, AggregateRating) for rich snippets in search results.
--   **Compliance Focused Content:** All content emphasizes adherence to Queensland's strict regulations for demolition and asbestos removal, building trust and authority.
--   **Lead Generation Forms:** Multiple conversion points, including a quick quote form, a detailed quote request page, and direct WhatsApp integration.
--   **Content-Rich Blog:** Features 11+ articles on safety, regulations, and service guides to drive organic traffic and educate clients.
--   **Accessibility Optimized:** WCAG-compliant with ARIA labels and semantic HTML roles for screen readers.
+- **Nome da Empresa:** DL Demolition and Asbestos Experts Pty Ltd
+- **ABN:** 40 693 228 321
+- **Endereço:** Southport QLD 4215, Austrália
+- **Telefone:** [07 5699 9693](tel:0756999693)
+- **Email:** [hello@dldemolition.com.au](mailto:hello@dldemolition.com.au)
 
 ---
 
-## 🛠️ Tech Stack
+## 🌐 Demonstração ao Vivo
 
--   **Frontend:** HTML5, Tailwind CSS, JavaScript (ES6+)
--   **Build Tool:** No build step required; the project is a pure static site.
--   **PWA:** Service Worker API for offline caching and `manifest.webmanifest` for installability.
--   **Analytics:** Google Analytics 4 (G-4GBXQJ78CT)
--   **SEO Tools:** Google Search Console, Sitemap.xml, Robots.txt
--   **Hosting:** Compatible with any static hosting provider (Netlify, Vercel, GitHub Pages, AWS S3).
+O site está no ar e pode ser acessado em:
+
+### **[https://www.dldemolition.com.au](https://www.dldemolition.com.au)**
 
 ---
 
-## 📁 Project Structure
+## ✨ Principais Funcionalidades
+
+- 📱 **Design Profissional e Responsivo:** Construído com uma abordagem *mobile-first* usando Tailwind CSS para uma experiência perfeita em todos os dispositivos.
+- 🚀 **Progressive Web App (PWA):** O site é instalável e oferece uma experiência offline, garantindo acessibilidade e uma sensação de aplicativo nativo.
+- 🧮 **Calculadora de Preços Interativa:** Uma funcionalidade exclusiva que permite aos clientes obter estimativas de custo instantâneas para 8 serviços diferentes, com modificadores para urgência, dificuldade de acesso e localização. Os resultados integram-se diretamente com o WhatsApp para um processo de cotação sem atritos.
+- 📈 **SEO Avançado e Schema Markup:** SEO técnico e de página abrangente, incluindo meta tags exclusivas, palavras-chave baseadas em localização e dados estruturados (LocalBusiness, Service, AggregateRating) para rich snippets nos resultados de busca.
+- 🛡️ **Conteúdo Focado em Conformidade:** Todo o conteúdo enfatiza a adesão às regulamentações de Queensland para demolição e remoção de amianto, construindo confiança e autoridade.
+- ✉️ **Geração de Leads:** Múltiplos pontos de conversão, incluindo um formulário de cotação rápida, uma página de solicitação de cotação detalhada e integração direta com o WhatsApp.
+- ✍️ **Blog Rico em Conteúdo:** Mais de 11 artigos sobre segurança, regulamentações e guias de serviço para impulsionar o tráfego orgânico e educar os clientes.
+- ♿ **Acessibilidade Otimizada:** Em conformidade com as diretrizes WCAG, utilizando atributos ARIA e HTML semântico para leitores de tela.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Categoria | Tecnologia |
+| :--- | :--- |
+| **Frontend** | HTML5, Tailwind CSS, JavaScript (ES6+) |
+| **PWA** | Service Worker API, `manifest.webmanifest` |
+| **Analytics** | Google Analytics 4 (G-4GBXQJ78CT) |
+| **SEO** | `sitemap.xml`, `robots.txt`, Schema.org JSON-LD |
+| **Hospedagem** | GitHub Pages (compatível com qualquer host estático) |
+| **Dev Server** | Python 3 `http.server`, Node.js `live-server` |
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```
 /DL-Demolition-and-Asbestos-experts
 ├── assets/
-│   ├── css/                    # Compiled CSS files
-│   ├── images/                 # All image assets (logos, projects, icons)
-│   └── js/                     # JavaScript files
-├── backup/                     # Backup versions of the site (not in production)
-├── *.html                      # Main HTML pages (index, about, services, etc.)
-├── blog-*.html                 # Individual blog post pages (11 articles)
-├── manifest.webmanifest        # PWA configuration file
-├── service-worker.js           # Service worker for offline functionality
-├── sitemap.xml                 # XML sitemap for search engines
-├── robots.txt                  # Crawler instructions
-├── README.md                   # This file
-└── LICENSE                     # MIT License
+│   ├── css/                    # Arquivos CSS (atualmente não compilados)
+│   ├── images/                 # Todos os ativos de imagem (logos, projetos, ícones)
+│   └── js/                     # Scripts JavaScript
+├── *.html                      # Páginas HTML principais (index, about, services, etc.)
+├── blog-*.html                 # Páginas de artigos de blog individuais
+├── manifest.webmanifest        # Arquivo de configuração do PWA
+├── service-worker.js           # Service worker para funcionalidade offline
+├── sitemap.xml                 # Sitemap XML para motores de busca
+├── robots.txt                  # Instruções para crawlers
+├── README.md                   # Este arquivo
+└── LICENSE                     # Licença do projeto
 ```
 
 ---
 
-## 🚀 Setup and Local Development
+## 🚀 Configuração e Desenvolvimento Local
 
-No complex build tools are required to run this project locally. You only need a local web server to serve the static files.
+Nenhuma ferramenta de build complexa é necessária para executar este projeto localmente. Você só precisa de um servidor web local para servir os arquivos estáticos.
 
-### Prerequisites
+### Pré-requisitos
 
--   Python 3 or Node.js installed
+- [Python 3](https://www.python.org/downloads/) ou [Node.js](https://nodejs.org/) instalado.
 
-### Steps
+### Passos
 
-1.  **Clone the repository:**
+1.  **Clone o repositório:**
     ```bash
     git clone https://github.com/dayrtonc/DL-Demolition-and-Asbestos-experts.git
     cd DL-Demolition-and-Asbestos-experts
     ```
 
-2.  **Serve the files:**
-    
-    **Option A: Python**
+2.  **Inicie um servidor local:**
+
+    **Opção A: Com Python**
     ```bash
     python3 -m http.server 8000
     ```
-    
-    **Option B: Node.js (live-server)**
+
+    **Opção B: Com Node.js (usando `live-server`)**
     ```bash
     npm install -g live-server
     live-server
     ```
 
-3.  **Open in browser:**
-    Navigate to `http://localhost:8000` (or the address provided by your server).
+3.  **Abra no navegador:**
+    Navegue para `http://localhost:8000` (ou o endereço fornecido pelo seu servidor).
 
 ---
 
-## ☁️ Deployment
+## ☁️ Implantação (Deploy)
 
-This is a static website. To deploy, simply upload the contents of the repository to any static hosting provider. **No build process is necessary.**
+Este é um site estático. Para implantar, basta fazer o upload do conteúdo do repositório para qualquer provedor de hospedagem estática. **Nenhum processo de build é necessário.**
 
-### Deployment Steps
+### Passos para Deploy
 
-1.  Choose a hosting provider (Netlify, Vercel, GitHub Pages, AWS S3, etc.).
-2.  Connect your Git repository to the provider.
-3.  Set the publish directory to the **root** of the repository.
-4.  Deploy.
+1.  Escolha um provedor de hospedagem (Netlify, Vercel, GitHub Pages, AWS S3, etc.).
+2.  Conecte seu repositório Git ao provedor.
+3.  Defina o diretório de publicação como a **raiz** do repositório.
+4.  Implante.
 
-Any changes pushed to the `main` branch will be automatically deployed.
+Qualquer alteração enviada para a branch `main` será automaticamente implantada se a integração contínua estiver configurada.
 
 ---
 
-## 🔧 Maintenance Guide
+## 🔧 Guia de Manutenção
 
-This guide simplifies the process of updating and maintaining the website.
+Este guia simplifica o processo de atualização e manutenção do site.
 
-### Adding a New Blog Article
+### Adicionando um Novo Artigo de Blog
 
-1.  **Create a new file:** Duplicate an existing blog file (e.g., `blog-asbestos-removal-guide.html`) and rename it to match your new article (e.g., `blog-new-article-title.html`).
-2.  **Edit the content:** Update the title, meta description, content, and images in the new file.
-3.  **Update `sitemap.xml`:** Add a new `<url>` entry for your article:
+1.  **Crie um novo arquivo:** Duplique um arquivo de blog existente (ex: `blog-asbestos-removal-guide.html`) e renomeie-o para corresponder ao novo título (ex: `blog-novo-titulo.html`).
+2.  **Edite o conteúdo:** Atualize o título, meta description, conteúdo e imagens no novo arquivo.
+3.  **Atualize o `sitemap.xml`:** Adicione uma nova entrada `<url>` para o seu artigo:
     ```xml
     <url>
-      <loc>https://www.dldemolition.com.au/blog-new-article-title.html</loc>
+      <loc>https://www.dldemolition.com.au/blog-novo-titulo.html</loc>
       <lastmod>YYYY-MM-DD</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
     </url>
     ```
-4.  **Update `blog.html`:** Add a new card linking to your article on the main blog page.
-5.  **Commit and push** your changes to deploy.
+4.  **Atualize o `blog.html`:** Adicione um novo card na página principal do blog com o link para o seu novo artigo.
+5.  **Faça commit e push** das suas alterações para implantar.
 
-### Updating Contact Information
+### Atualizando Informações de Contato
 
-Contact information (phone, email, address, business hours) appears in multiple files. To update:
+As informações de contato (telefone, email, endereço) aparecem em vários arquivos. Para atualizar:
 
-1.  **Use Find & Replace** in your code editor to search for the old value and replace it with the new one across all files.
-2.  **Key files to check:**
-    -   All HTML files (especially `index.html`, `about.html`, `quote.html`, footers)
-    -   JSON-LD structured data in `<script type="application/ld+json">` tags
-    -   `README.md` (this file)
-3.  **Update link attributes:**
-    -   Phone links: `href="tel:0756999693"`
-    -   Email links: `href="mailto:hello@dldemolition.com.au"`
+1.  **Use a função "Localizar e Substituir"** no seu editor de código para procurar o valor antigo e substituí-lo pelo novo em todos os arquivos.
+2.  **Arquivos-chave para verificar:**
+    -   Todos os arquivos `.html` (especialmente `index.html`, `about.html`, `quote.html` e rodapés).
+    -   Dados estruturados JSON-LD nas tags `<script type="application/ld+json">`.
+    -   `README.md` (este arquivo).
 
-### Updating the Sitemap
+### Otimizando Imagens
 
-When adding new pages or updating existing ones:
+Antes de fazer upload de novas imagens:
 
-1.  Open `sitemap.xml`
-2.  Update the `<lastmod>` date to today's date (format: `YYYY-MM-DD`)
-3.  Add new `<url>` entries for any new pages
-4.  Commit and push changes
-5.  Resubmit the sitemap in Google Search Console
-
-### Optimizing Images
-
-Before uploading new images:
-
-1.  **Compress:** Use [TinyPNG](https://tinypng.com/) or [Squoosh](https://squoosh.app/)
-2.  **Convert to WebP:** Use modern formats for better performance
-3.  **Use descriptive names:** `asbestos-removal-gold-coast.jpg` instead of `IMG_1234.jpg`
-4.  **Add alt text:** Always include descriptive alt attributes for SEO and accessibility
+1.  **Comprima:** Use ferramentas como [TinyPNG](https://tinypng.com/) ou [Squoosh](https://squoosh.app/).
+2.  **Converta para WebP:** Use formatos modernos para melhor performance.
+3.  **Use nomes descritivos:** `remocao-amianto-gold-coast.jpg` em vez de `IMG_1234.jpg`.
+4.  **Adicione texto alternativo (alt text):** Sempre inclua atributos `alt` descritivos para SEO e acessibilidade.
 
 ---
 
-## 📊 SEO & Analytics
+## 📊 SEO e Analytics
 
 ### Google Analytics 4
 
--   **Measurement ID:** G-4GBXQJ78CT
--   **Dashboard:** [analytics.google.com](https://analytics.google.com)
--   Tracks all user interactions, traffic sources, and conversion events
+-   **ID de Medição:** `G-4GBXQJ78CT`
+-   **Painel:** [analytics.google.com](https://analytics.google.com)
+-   Rastreia todas as interações do usuário, fontes de tráfego e eventos de conversão.
 
 ### Google Search Console
 
--   **Property:** https://www.dldemolition.com.au
--   **Dashboard:** [search.google.com/search-console](https://search.google.com/search-console)
--   Monitor search performance, indexing status, and submit sitemaps
+-   **Propriedade:** `https://www.dldemolition.com.au`
+-   **Painel:** [search.google.com/search-console](https://search.google.com/search-console)
+-   Monitora o desempenho da pesquisa, o status da indexação e permite o envio de sitemaps.
 
-### Google Business Profile
+### Checklist de SEO
 
--   **Status:** Verified (awaiting final approval)
--   **Location:** Southport QLD 4215
--   Regularly update with posts, photos, and respond to reviews
-
-### SEO Checklist
-
--   ✅ Sitemap.xml submitted to Google Search Console
--   ✅ Robots.txt configured
--   ✅ All pages have unique meta titles and descriptions
--   ✅ Schema.org structured data implemented
--   ✅ All images have alt text
--   ✅ Mobile-friendly and responsive
--   ✅ HTTPS enabled
--   ✅ Page load speed optimized
--   ✅ WCAG accessibility standards met
+-   [x] `sitemap.xml` enviado ao Google Search Console.
+-   [x] `robots.txt` configurado.
+-   [x] Todas as páginas possuem meta títulos e descrições únicos.
+-   [x] Dados estruturados Schema.org implementados.
+-   [x] Todas as imagens possuem texto alternativo.
+-   [x] Design responsivo e amigável para dispositivos móveis.
+-   [x] HTTPS ativado.
+-   [x] Velocidade de carregamento da página otimizada.
+-   [x] Padrões de acessibilidade WCAG atendidos.
 
 ---
 
-## 📄 License
+## 📄 Licença
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## 📞 Contact & Support
-
-For technical support or inquiries about this repository:
-
--   **Email:** hello@dldemolition.com.au
--   **Phone:** 07 5699 9693
--   **GitHub Issues:** [Create an issue](https://github.com/dayrtonc/DL-Demolition-and-Asbestos-experts/issues)
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
-**Last Updated:** December 1, 2025  
-**Maintained by:** Manus AI & DL Demolition Team
+*Este README foi gerado e mantido pela Manus AI e pela equipe da DL Demolition.*
+*Última atualização: 6 de dezembro de 2024*
