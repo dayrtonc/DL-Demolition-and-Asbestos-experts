@@ -1,46 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://www.dldemolition.com.au/sitemap.xml
-
-# Disallow admin areas and sensitive files
-Disallow: /admin/
-Disallow: /private/
-Disallow: /.git/
-Disallow: /node_modules/
-Disallow: /backup/
-Disallow: /*.json$
-Disallow: /*.md$
-Disallow: /*.log$
-
-# Allow important pages
-Allow: /services
-Allow: /calculator
-Allow: /about
-Allow: /projects
-Allow: /reviews
-Allow: /blog
-Allow: /quote
-
-# Allow assets
-Allow: /assets/
-Allow: /manifest.webmanifest
-Allow: /service-worker.js
-
-# Crawl delay (optional)
-Crawl-delay: 1
-
-# Security: Block aggressive scrapers
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
